@@ -18,7 +18,7 @@ after_success:
   #Log in to Docker cli
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   #Take images and push to docker hub
-  - docker push terriwunde/multi-client 
+  - docker push terriwunde/multi-client  
   - docker push terriwunde/multi-nginx    
   - docker push terriwunde/multi-server 
   - docker push terriwunde/multi-worker 
