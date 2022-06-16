@@ -11,10 +11,11 @@ scripts:
 
 after_success:
 
-  - docker build -t terriwunde/multi-client ./client
+  
   - docker build -t terriwunde/multi-nginx  ./nginx
   - docker build -t terriwunde/multi-server ./server
   - docker build -t terriwunde/multi-worker ./worker
+  - docker build -t terriwunde/multi-client ./client
 
   #Log in to Docker cli
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
